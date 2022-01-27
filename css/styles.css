@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* Comentário que aparece no arquivo css */
+/*! Comentário que aparece inclusive no modo de compressão */
+/* Totos funcionam
+ * em multilinhas */
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  background-color: #ddd;
+  padding: 20px;
+  margin: 0px;
+}
+.container #title {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+}
+
+.container-bottom {
+  background-color: #ddd;
+  text-align: center;
+  padding: 50px;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,124 @@
+
+// comentário restrito ao sass (não aparece no css)
+/* Comentário que aparece no arquivo css
+/*! Comentário que aparece inclusive no modo de compressão
+
+/* Totos funcionam
+   em multilinhas
+
+@import 'variables'
+
+body
+    padding: 0px
+    margin: 0px
+
+.container
+    background-color: $bg-color
+    padding: 20px
+    margin: 0px
+
+    #title
+        background-color: $title-background
+        color: $title-color
+        padding: 15px
+        text-align: center
+
+.container-bottom
+    background-color: #ddd
+    text-align: center
+    padding: 50px
+
+div, main
+    background-color: #ddd
+
+    p
+        color: blue
+        font-size: $main-font
+
+main
+
+    .p-vermelho
+        color: red
+
+    p
+        color: blue
+
+li
+    color: purple
+
+ol
+
+    >li
+        color: blue
+
+a
+    text-decoration: none
+    color: green
+    transition: .5s
+    padding: 10px
+    border: 1px solid green
+    display: block
+    width: 150px
+    text-align: center
+
+    &:hover
+        background-color: green
+        color: white
+
+
+.container2
+    background-color: $bg-color
+    padding: 20px
+    margin: 20px
+
+    &-content // = .container2-content
+        color: red
+
+.spacing
+    padding: 200px
+
+
+.btn
+    padding: 10px 20px
+    border: 1px solid blue
+    border-radius: 5px
+    color: white
+    background-color: blue
+    cursor: pointer
+    
+    &:hover
+        background-color: transparent
+        color: blue
+        
+    &-success
+        background-color: green
+        border: 1px solid green
+
+        &:hover
+            color: green
+
+    &-danger
+        background-color: red
+        border: 1px solid red
+
+        &:hover
+            color: red
+
+
+
+    
+%base-title-style
+    border-bottom: 2px dotted red
+    padding: 10px
+    background-color: yellow
+    text-align: center
+
+.title
+    font-size: 30px
+    @extend %base-title-style
+
+.subtitle
+    font-size: 25px
+    @extend %base-title-style
+
+
