@@ -18,39 +18,100 @@
             flex: 1 1 auto;
         }
 
+        #menu-itens{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
         .menu-item{
             flex: 0 1 80px;
             align-items: center;
             text-align: right;
+            padding:0px 15px;
         }
+
+        #menu-burg img{
+            height: 13px;
+        }
+
+        #menu-burg-itens{
+            position: absolute;
+            right:10px;
+            top:65px;
+            display: flex;
+            flex-flow: column wrap;
+            border: 1px solid black;
+            align-items: flex-end;
+            margin-top: 10px;
+        }
+
+        #menu-burg-itens .item {
+            flex: 1 1 auto;
+            padding:10px;
+        }
+
     </style>
     <script src="js/jquery.js"></script>
     <script type="text/JavaScript">
 
+        var burgItensView = false;
+
         $(document).ready(function(){
             $("img").click(function(){
-                alert("teste");
+                if(burgItensView == false){
+                    burgItensView = true;
+                    $("#menu-burg-itens").show();
+                }else{
+                    burgItensView = false;
+                    $("#menu-burg-itens").hide();
+                }
+                
             })
-        });        
+        });  
+
+        $(window).resize(function(){
+            if ($(document).innerWidth() < 600){
+                $("#menu-itens").hide();
+                $("#menu-burg").show();
+            }else{
+                $("#menu-itens").show();
+                $("#menu-burg").hide();
+                $("#menu-burg-itens").hide();
+            }
+        });
+
+        $(window).ready(function(){
+            $("#menu-burg-itens").hide();
+            if ($(document).innerWidth() < 600){
+                $("#menu-itens").hide();
+                $("#menu-burg").show();
+            }else{
+                $("#menu-itens").show();
+                $("#menu-burg").hide();
+            }
+        });
+
     </script>
 
 </head>
 <body>
     <span class="container">
         <div class="logo"><a href="#">My logo</a></div>
-        <script>
-             $(window).resize(function(){
-            if ($(document).innerWidth() < 600){
-                alert("menor 600");
-            }else{
-                document.write('<div class="menu-item">Menu 1</div>')
-                document.write('<div class="menu-item">Menu 2</div>')
-                document.write('<div class="menu-item">Menu 3</div>')
-                document.write('<div class="menu-item">Menu 4</div>')
-            }
-        });
-        </script>
-        
+        <div id="menu-itens">
+            <div class="menu-item">Menu 1</div>
+            <div class="menu-item">Menu 2</div>
+            <div class="menu-item">Menu 3</div>
+            <div class="menu-item">Menu 4</div>
+        </div>
+        <div id="menu-burg">
+            <img src="https://img.icons8.com/android/24/000000/menu.png ">
+        </div>
     </span>
+    <div id="menu-burg-itens">
+        <div class="item">Menu 1</div>
+        <div class="item">Menu 2</div>
+        <div class="item">Menu 3</div>
+        <div class="item">Menu 4</div>
+    </div>
 </body>
 </html>
