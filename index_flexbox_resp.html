@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            border: 1px solid black;
+            padding:20px;
+        }
+
+        .logo{
+            flex: 1 1 auto;
+        }
+
+        .menu-item{
+            flex: 0 1 80px;
+            align-items: center;
+            text-align: right;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script type="text/JavaScript">
+
+        $(document).ready(function(){
+            $("img").click(function(){
+                alert("teste");
+            })
+        });        
+    </script>
+
+</head>
+<body>
+    <span class="container">
+        <div class="logo"><a href="#">My logo</a></div>
+        <script>
+             $(window).resize(function(){
+            if ($(document).innerWidth() < 600){
+                alert("menor 600");
+            }else{
+                document.write('<div class="menu-item">Menu 1</div>')
+                document.write('<div class="menu-item">Menu 2</div>')
+                document.write('<div class="menu-item">Menu 3</div>')
+                document.write('<div class="menu-item">Menu 4</div>')
+            }
+        });
+        </script>
+        
+    </span>
+</body>
+</html>

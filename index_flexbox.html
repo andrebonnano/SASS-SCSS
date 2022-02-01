@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: flex-end;
+            border: 1px solid black;
+            padding:20px;
+        }
+
+        .logo{
+            flex: 1 1 auto;
+        }
+
+        .menu-item{
+            flex: 0 1 80px;
+            align-items: center;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <span class="container">
+        <div class="logo"><a href="#">My logo</a></div>
+        <div class="menu-item">Menu 1</div>
+        <div class="menu-item">Menu 2</div>
+        <div class="menu-item">Menu 3</div>
+        <div class="menu-item">Menu 4</div>
+
+    </span>
+</body>
+</html>
