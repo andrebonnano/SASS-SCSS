@@ -1,0 +1,66 @@
+.btn {
+  background-color: #ddd;
+  color: #000;
+  padding: 12px 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+body {
+  margin: 20px;
+}
+
+.p-esp {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+}
+.p-esp:hover {
+  border-color: blue;
+  color: blue;
+}
+
+h2 {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+  border-color: green;
+  color: green;
+}
+h2:hover {
+  border-color: blue;
+  color: blue;
+}
+
+.esp-menor {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid red;
+  color: #000;
+  background-color: #FFF;
+}
+
+.esp-medio {
+  padding: 15px;
+  margin: 15px;
+  border: 2px dotted blue;
+  color: #000;
+  background-color: #321;
+}
+
+.esp-maior {
+  padding: 25px;
+  margin: 25px;
+  border: 1px solid green;
+  color: #915;
+  background-color: #369;
+}
+
+.fonte-pequena {
+  font-size: 5px;
+  color: blue;
+}
+
+/*# sourceMappingURL=styles-func.css.map */

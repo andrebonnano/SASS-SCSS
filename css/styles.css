@@ -3,13 +3,21 @@
 /*! Comentário que aparece inclusive no modo de compressão */
 /* Totos funcionam
  * em multilinhas */
+.btn {
+  background-color: #ddd;
+  color: #000;
+  padding: 12px 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
 body {
   padding: 0px;
   margin: 0px;
 }
 
 .container {
-  background-color: #ddd;
+  background-color: #000;
   padding: 20px;
   margin: 0px;
 }
@@ -65,7 +73,7 @@ a:hover {
 }
 
 .container2 {
-  background-color: #ddd;
+  background-color: #000;
   padding: 20px;
   margin: 20px;
 }

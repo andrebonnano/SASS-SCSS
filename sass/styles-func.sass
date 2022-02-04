@@ -1,0 +1,35 @@
+@import 'variables'
+@import 'button'
+@import 'mixins'
+@import 'functions'
+
+
+
+body
+    margin: 20px
+
+.p-esp
+    @include special
+
+h2
+    @include special
+    @include green
+
+.esp-menor
+    @include espacamento(10px, 10px)
+    @include custom-border(solid, red)
+    @include colors
+
+.esp-medio
+    @include espacamento(15px, 15px)
+    @include custom-border(dotted, blue, 2px)
+    @include colors($background:#321)
+
+.esp-maior
+    @include espacamento(25px, 25px)
+    border: 1px solid green
+    @include colors($background:#369, $font:#915)
+
+.fonte-pequena
+    font-size: 5px
+    color: text-color(5)

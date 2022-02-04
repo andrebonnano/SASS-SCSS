@@ -13,7 +13,60 @@
     .classe1
         margin: #{$variavel-01 + 5px}
         padding: #{$variavel-01 + $variavel-02}
+  
 
 // Arquivos "partials" são arquivos complementares que possuem variáveis ou outros elementos e podem ser impordaos para o arquivo principal utilizando a sintaxe:
     @import 'variables'
     @import 'buttom'
+
+
+// Mixins são includes para serem usados dentro de uma classe
+    @mixin @include nome
+        coloer: red        
+
+    p
+        @includespecial
+
+// Mixins podem ser utilizados como funções que recebem parâmetros (parametros opcionais devem ser passados por último, e sempre utilizando ":" junto com a variavel) 
+    @mixin espacamento ($p, $m:5px)
+        padding: $p
+        margin: $m
+
+    .classe
+        @include espacamento(10px, 10px)
+
+//Também pode chamar o argumento pelo nome, aí a ordem que o argumento é passado na chamada, não importa!
+    .classe
+        @include espacamento($m:20px, $p:4px)
+
+        
+// Herança. Podemos criar classes extensoras "@extend" que vão incluir argumentos dentro da classe onde forem chamados. Quando não são utilizados são ignorados para a geração de CSS
+    %base-title-style
+        border-bottom: 2px dotted red
+        padding: 10px
+        background-color: yellow
+        text-align: center
+
+    .title
+        font-size: 30px
+        @extend %base-title-style
+
+    
+// SASS permite fazer cálculos matemáricos nos argumentos inclusive utilizando variáveis.
+    .container
+        width: 100px * 2
+        height: 10px + 5px
+
+
+// Funções... parecidos com os mixins. É mais utilizado para fins estruturais. Pode retornar um valor. Assim como nos Mixins potem ter parametros opcionais.
+    @function text-color($size)
+        $color: #000
+        @if $size > 10
+            $color red
+        @else 
+            $color: blue
+        @return $color
+
+    .classe
+        color: text-color(5)
+        background-color: text-color($size: 5)
